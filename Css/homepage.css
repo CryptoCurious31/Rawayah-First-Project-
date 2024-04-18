@@ -272,6 +272,46 @@ body {
 /* ============ All Product Section Css ============== */
 
 
+.containerTwo {
+    width: 100%;
+    margin-top: 100px;
+    height: 210px;
+    /* background-color: #fff; */
+}
+
+.imagesSectionTwo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    justify-items: center;
+}
+
+
+/* ========= Utility Classes ============ */
+.forDisplay{ 
+    display: block;
+}
+
+.oneClass {
+    width: 170px;
+    border-radius: 50%   
+}
+
+.CategoryName {
+    text-decoration: none;
+    margin-top: 0px;
+    display: block;
+    text-align: center;
+    color: var(--text-primary);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.CategoryName:hover {
+    color: var(--navigation-Menu-hover-color);
+}
+
 /* ============ All Product Section Css ============== */
  
 
