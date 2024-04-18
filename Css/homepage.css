@@ -1,0 +1,277 @@
+/* google Fonts Poppins Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --header-background-color: ##181A1B;
+    --strip-secondary-color: #1F2123;
+    --primary-font-color: white;
+    --dropDown-content-Background-color: #181A1B;
+    --navigation-Menu-hover-color: rgb(119, 118, 118);
+    --main-section-background-color: #640207;
+    --background-color-btn-afterHover: white;
+    --text-primary-color-hover: #000;
+    --text-primary: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/*  ========= Header Css ========== */
+.header {
+    height: 110px;
+    width: 100%;
+    background-color: var(--header-background-color);
+}
+
+.logoWithIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+
+.header .logoWithIcons .socialIcons a {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    text-decoration: none;
+    color: var(--primary-font-color);
+}
+
+.header .logoWithIcons .logo {
+    color: var(--primary-font-color);  
+    font-size: 30px ;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.header .logoWithIcons .icons .MenuItems {
+    display: inline-block;
+    padding: 5px 0 10px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: var(--primary-font-color);
+}
+
+/* ========== Navigation Bar ============= */
+
+.navbar {
+    margin-top: 5px;
+}
+
+.navigationBar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+}
+
+.MenuItems {
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--primary-font-color);
+    transition: all .2s ease-in;
+}
+
+.MenuItems:hover {
+    color: var(--navigation-Menu-hover-color);
+}
+
+.listitems {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* ======= Drop Down Menu Css */
+
+.dropDownMenu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownbtn {
+    background-color: transparent !important;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--primary-font-color);
+    transition: all .2s ease-in;
+}
+
+.dropDownbtn:hover {
+    color: var(--navigation-Menu-hover-color);
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    right: -53px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #181A1B;
+}
+
+.dropDownMenu:hover .dropDownContent {
+    display: block;
+}
+
+.dropDownContent .MenuItems {
+    color: var(--primary-font-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropDownContent a:hover {
+    color: var(--navigation-Menu-hover-color);
+}
+
+/* ======== Strip ======== */
+
+.header .strip {
+    background-color: var(--strip-secondary-color) ;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.header .strip i {
+    align-content: center;
+    position: relative;
+    right: 10px;
+    display: block;
+    margin-left: 30px;
+}
+
+.header .strip .heading {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header .strip .subText {
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.strip .return {
+    align-content: center;
+    display: inline-block;
+    position: relative;
+    left: -40px;
+}
+
+.strip .freeExchange {
+    align-content: center;
+    position: relative;
+    left: -40px;
+}
+
+.strip .freeDelivery {
+    align-content: center;
+    position: relative;
+    left: -40px;
+}
+
+.strip .warranty {
+    align-content: center;
+    position: relative;
+    left: -40px;
+}
+
+/* =========== Carousel section Css Start ============ */
+
+.carousel {
+    height: 500px;
+    width: 100%;
+    margin-top: 82px;
+}
+
+.carousel .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel .container .text {
+    background-color: var(--main-section-background-color) ;
+    width: 50%;
+    height: 542px;
+}
+
+.container .image {
+    width: 50%;
+}
+
+.container .image img {
+    width: 100%;
+    height: 542px;
+}
+
+.container .text {
+    text-align: center;
+    align-content: center;
+}
+
+.text .textAndHeadings {
+    line-height: 5rem;
+}
+
+.mainHeading {
+    font-size: 4rem;
+}
+
+.text .subtext2 {
+    margin-block-end: -14px;
+    font-size: 0.9rem;
+}
+
+.text .slogan{
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+}
+
+.text .button .btn {
+    padding: 14px;
+    background-color: var(--dropDown-content-Background-color);
+    text-decoration: none;
+    color: var(--text-primary) ;
+}
+
+.text .button .btn:hover {
+    color: var(--text-primary-color-hover);
+    background-color: var(--background-color-btn-afterHover) ;
+}
+/* ============= Carousel section Css Ends ============== */
+
+/* ============ All Product Section Css ============== */
+
+
+/* ============ All Product Section Css ============== */
+ 
+
