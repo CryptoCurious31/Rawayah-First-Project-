@@ -314,4 +314,33 @@ body {
 
 /* ============ All Product Section Css ============== */
  
+/* ====== Featured Items Css ====== */
 
+.featuredItems {
+    height: auto;
+    width: 100%;
+}
+
+.featuredItems-container {
+    width: 100%;
+    height: auto;
+    margin: 80px 0;
+}
+
+.new-arrivals {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.new-arrivals span {
+    font-size: 2rem;
+}
+
+span::before {
+    height: 2px;
+    content: "";
+    background-color: white;
+    width: 100%;
+    display: inline;
+    position: relative;
+}
