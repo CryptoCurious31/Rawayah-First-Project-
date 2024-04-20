@@ -332,15 +332,7 @@ body {
     text-align: center;
 }
 
-.new-arrivals span {
-    font-size: 2rem;
-}
 
-span::before {
-    height: 2px;
-    content: "";
-    background-color: white;
-    width: 100%;
-    display: inline;
-    position: relative;
-}
+
+
+
