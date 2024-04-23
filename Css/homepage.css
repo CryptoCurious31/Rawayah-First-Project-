@@ -362,8 +362,21 @@ body {
     width: 100%;
 }
 
-.items > img {
-    width: 50px;
+.items {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
 }
 
+.items > img {
+    
+    height: 300px;
+    position: relative;
+}
+
+.items > i {
+    /* position: absolute;
+    bottom: -100px;
+    display: block; */
+}
 
