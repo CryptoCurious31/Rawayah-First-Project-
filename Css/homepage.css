@@ -312,11 +312,50 @@ body {
     color: var(--navigation-Menu-hover-color);
 }
 
+/* ========= Premium Design Section Css */
+
+.staticPicture {
+    width: 100%;
+    margin: 80px auto ;
+}
+
+.premium {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.premium::before {
+    content: '';
+    height: 2px;
+    position: absolute;  
+    background-color: #fff;
+    width: 30%;
+    top: 50%;
+}
+
+.premium::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    background-color: #fff;
+    height: 2px;
+}
+
+.premium::before {
+    left: 0;
+}
+
+.premium::after {
+    right: 0;
+}
 /* ============ All Product Section Css ============== */
  
 /* ====== Featured Items Css ====== */
 
-.featuredItems {
+/* .featuredItems {
     height: auto;
     width: 100%;
 }
@@ -375,8 +414,8 @@ body {
 }
 
 .items > i {
-    /* position: absolute;
+    position: absolute;
     bottom: -100px;
-    display: block; */
-}
+    display: block; 
+} */
 
