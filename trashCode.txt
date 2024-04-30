@@ -1,0 +1,122 @@
+<section class="Product">
+            <h3 class="Featured-Collection">
+                Featured Collection
+            </h3>
+            <button class="prev-btn">
+                <img src="./product-slider/images/arrow.png" alt="Previous-Arrow-png">
+            </button>
+            <button class="nxt-btn">
+                <img src="./product-slider/images/arrow.png" alt="Next-Arrow-png">
+            </button>
+            <div class="Product-Container">
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card2.jpg" alt="Image-02" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card3.jpg" alt="Image-03" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card4.jpg" alt="Image-04" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card5.jpg" alt="Image-05" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card6.jpg" alt="Image-06" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card7.jpg" alt="Image-07" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card8.jpg" alt="Image-08" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card9.jpg" alt="Image-09" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                <div class="Product-card">
+                    <div class="Product-image">
+                        <span class="Discount-tag">50% Off</span>
+                        <img src="./product-slider/images/card10.jpg" alt="Image-10" class="Product-thumb" >
+                        <button class="wishlist-button">Add to WishList</button>
+                    </div>
+                    <div class="Product-info">
+                        <h3 class="brand">Brand Name</h3>
+                        <p class="short-discription-about-product">A short discription about product</p>
+                        <span class="price">$98.76</span><span class="actual-price">$105.65</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+</section>
