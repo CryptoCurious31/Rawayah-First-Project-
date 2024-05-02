@@ -1,5 +1,9 @@
-/* google Fonts Poppins Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+/* ============= google Fonts Poppins Link ============ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ============== Nunito Sans google font =============== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 
 :root {
     --font-family: "Poppins", sans-serif;
@@ -21,7 +25,8 @@
 }
 
 body {
-    font-family: var(--font-family);
+    /* font-family: var(--font-family); */
+    font-family: 'Nunito', sans-serif;
 }
 
 /*  ========= Header Css ========== */
@@ -49,10 +54,10 @@ body {
 }
 
 .header .logoWithIcons .logo {
-    color: var(--primary-font-color);  
-    font-size: 30px ;
+    color: var(--primary-font-color);
+    font-size: 30px;
     font-weight: 600;
-    font-style: normal; 
+    font-style: normal;
 }
 
 .header .logoWithIcons .icons .MenuItems {
@@ -130,7 +135,7 @@ body {
     position: absolute;
     right: -53px;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     background-color: #181A1B;
 }
@@ -153,7 +158,7 @@ body {
 /* ======== Strip ======== */
 
 .header .strip {
-    background-color: var(--strip-secondary-color) ;
+    background-color: var(--strip-secondary-color);
     height: 90px;
     width: 100%;
     display: flex;
@@ -219,7 +224,7 @@ body {
 }
 
 .carousel .container .text {
-    background-color: var(--main-section-background-color) ;
+    background-color: var(--main-section-background-color);
     width: 50%;
     height: 542px;
 }
@@ -251,7 +256,7 @@ body {
     font-size: 0.9rem;
 }
 
-.text .slogan{
+.text .slogan {
     font-size: 1.6rem;
     letter-spacing: -1px;
 }
@@ -260,13 +265,14 @@ body {
     padding: 14px;
     background-color: var(--dropDown-content-Background-color);
     text-decoration: none;
-    color: var(--text-primary) ;
+    color: var(--text-primary);
 }
 
 .text .button .btn:hover {
     color: var(--text-primary-color-hover);
-    background-color: var(--background-color-btn-afterHover) ;
+    background-color: var(--background-color-btn-afterHover);
 }
+
 /* ============= Carousel section Css Ends ============== */
 
 /* ============ All Product Section Css ============== */
@@ -288,13 +294,13 @@ body {
 
 
 /* ========= Utility Classes ============ */
-.forDisplay{ 
+.forDisplay {
     display: block;
 }
 
 .oneClass {
     width: 170px;
-    border-radius: 50%   
+    border-radius: 50%
 }
 
 .CategoryName {
@@ -316,7 +322,7 @@ body {
 
 .staticPicture {
     width: 100%;
-    margin: 100px auto ;
+    margin: 100px auto;
 }
 
 .premium {
@@ -330,7 +336,7 @@ body {
 .premium::before {
     content: '';
     height: 2px;
-    position: absolute;  
+    position: absolute;
     background-color: #fff;
     width: 30%;
     top: 50%;
@@ -353,7 +359,7 @@ body {
     right: 0;
 }
 
-.staticPicture > img {
+.staticPicture>img {
     display: block;
     width: 100%;
     margin-top: 60px;
@@ -363,36 +369,157 @@ body {
 
 .product {
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 20px;
 }
 
 .product-category {
-    font-size: 25px;
+    padding: 0 10vw;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
     text-transform: capitalize;
     text-align: center;
 }
 
-.collection-name {
-    font-size: 35px;
-    font-weight: 200;
-    margin: 20px auto;
-    display: block;
-    text-align: center;
-}
+
 
 .product-container {
-    padding: 0 4vw;
+    padding: 0 10vw;
     display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
 }
 
 .product-card {
     flex: 0 0 auto;
-    width: 250px;
+    width: 350px;
     height: 450px;
     margin-right: 40px;
 }
 
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
 
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discount-tag {
+    position: absolute;
+    padding: 20px 25px;
+    border-radius: 1px;
+    color: #FF0000;
+    left: 15px;
+    top: 15px;
+    text-transform: capitalize;
+    background-color: #000;
+}
+
+.product-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand {
+    text-transform: uppercase;
+}
+
+.product-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn {
+    right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+    opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    opacity: 1;
+}
+
+.collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.collection {
+    position: relative;
+}
+
+.collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+}

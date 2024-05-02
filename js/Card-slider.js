@@ -1,6 +1,7 @@
-const productContainers = [...document.querySelectorAll('.Product-Container')];
+const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.prev-btn')];
+const preBtn = [...document.querySelectorAll('.prv-btn')];
+
 
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
@@ -14,3 +15,5 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+
