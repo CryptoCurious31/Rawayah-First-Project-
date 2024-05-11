@@ -25,7 +25,7 @@
         <ul class="newsletter">
             <li><h3>Newsletter</h3></li>
             <li><p>Subscribe to receive Exclusive deals, and more</p></li>
-            <li><input type="email" required></li>
+            <li><input type="email" placeholder="Your email address" required></li>
             <li><button type="submit">Subscribe</button></li>
         </ul>
         </div>

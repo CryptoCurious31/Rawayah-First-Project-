@@ -646,3 +646,28 @@ ul.slick-dots li button{
     color: #878787;
     margin-bottom: 15px;
 }
+
+.newsletter input {
+    padding: 5px 25px;
+    font-family: 'Jost', sans-serif;
+    color: #878787;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.newsletter button {
+    margin-top: 8px;
+    background-color: #000;
+    color: #fff;
+    padding: 7px 20px;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.newsletter button:hover {
+    color: #00ffff;
+}
