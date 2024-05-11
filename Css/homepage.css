@@ -3,7 +3,10 @@
 
 /* ============== Nunito Sans google font =============== */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+/* ==== Montserrat Font ====== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* === Jost Font === */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --font-family: "Poppins", sans-serif;
@@ -17,7 +20,27 @@
     --text-primary-color-hover: #000;
     --text-primary: #fff;
 }
-
+ul,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button{
+    border: 0;
+    outline: 0;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
 * {
     margin: 0;
     padding: 0;
@@ -25,13 +48,12 @@
 }
 
 body {
-    /* font-family: var(--font-family); */
     font-family: 'Nunito', sans-serif;
+    background-color: #000 !important;
 }
 
 /*  ========= Header Css ========== */
 .header {
-    height: 110px;
     width: 100%;
     background-color: var(--header-background-color);
 }
@@ -70,95 +92,87 @@ body {
     padding-bottom: 0px;
     color: var(--primary-font-color);
 }
-
-/* ========== Navigation Bar ============= */
-
-.navbar {
-    margin-top: 5px;
-}
-
-.navigationBar {
-    width: 100%;
-    height: 50px;
+.slick-arrow{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transform: translate(0, -78%);
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-
-.list {
+ul.slick-dots{
     display: flex;
-    justify-content: space-around;
-    width: 50%;
-    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+ul.slick-dots li button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    color: transparent;
 }
 
-.MenuItems {
-    list-style-type: none;
-    text-decoration: none;
-    color: var(--primary-font-color);
-    transition: all .2s ease-in;
+.slick-prev{
+    left: -35px;
+}
+.slick-next{
+    right: -35px;
+}
+/* ========== Navigation Bar ============= */
+.main-menu{
+    margin: 20px 0 16px 0;
 }
 
-.MenuItems:hover {
-    color: var(--navigation-Menu-hover-color);
+.main-menu nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
 }
-
-.listitems {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-}
-
-/* ======= Drop Down Menu Css */
-
-.dropDownMenu {
+.main-menu nav > ul li {
     position: relative;
-    display: inline-block;
 }
-
-.dropDownbtn {
-    background-color: transparent !important;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    font-style: normal;
+.main-menu nav > ul li a {
+    font-size: 18px;
     font-weight: 400;
-    color: var(--primary-font-color);
-    transition: all .2s ease-in;
-}
+    font-family: 'Jost', sans-serif;
+    color: #fff;
 
-.dropDownbtn:hover {
-    color: var(--navigation-Menu-hover-color);
 }
-
-.dropDownContent {
-    display: none;
+.main-menu nav > ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+    
+}
+.main-menu nav > ul li ul{
     position: absolute;
-    right: -53px;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 28px;
+    left: 0;
+    width: 170px;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
     z-index: 1;
-    background-color: #181A1B;
+    text-align: center;
+}
+.main-menu nav > ul li ul li a {
+    color: #000;
+    padding: 5px 0px; 
+    font-size: 16px;
 }
 
-.dropDownMenu:hover .dropDownContent {
-    display: block;
-}
 
-.dropDownContent .MenuItems {
-    color: var(--primary-font-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropDownContent a:hover {
-    color: var(--navigation-Menu-hover-color);
-}
 
 /* ======== Strip ======== */
 
 .header .strip {
-    background-color: var(--strip-secondary-color);
+    background-color: #fff;
     height: 90px;
     width: 100%;
     display: flex;
@@ -278,20 +292,23 @@ body {
 /* ============ All Product Section Css ============== */
 
 
-.containerTwo {
+.category img{
     width: 100%;
-    margin-top: 100px;
-    height: 210px;
-    /* background-color: #fff; */
+    border-radius: 50%;
+}
+.category h3 a{
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    padding-top: 10px;
 }
 
-.imagesSectionTwo {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    justify-items: center;
+.category h3:hover {
+    color: rgb(14, 193, 174);
 }
-
 
 /* ========= Utility Classes ============ */
 .forDisplay {
@@ -410,43 +427,121 @@ body {
 
 .product-img{
     position: relative;
+    padding-bottom: 100%;
 }
-.product-img img:first-child{
+.product-img img{
+    width: 100%;
+}
+.product-img img{
     position: absolute;
-    width: auto;
-    height: auto;
-    left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition:  all .5s;
-}
-.product-img img:nth-child(2){
-    position: absolute;
-    width: auto;
-    height: auto;
     left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition:  all .5s;
+    transform: translate(-50%,-50%); 
+    transition: all .5s;   
 }
-.product-img img {
-    width: 100% !important;
-    max-width: 100%;
-}
-.product-img:hover img:first-child{
+
+.product-img:hover img:nth-child(2){
     opacity: 0 !important;
 }
-.product-img:hover img:nth-child(2){
-    opacity: 1 !important;
+.product-title{
+    color: #fff;
+    padding-top: 15px;
+    text-align: center;
 }
-.product-img::before{
-    padding-bottom: 100%;
-    content: "";
-    display: block;
+.product-title h4{
+    font-size: 16px;
+    font-family:  'Jost', sans-serif;
+    font-weight: 400;
+    
 }
+
+.product-slide{
+    margin: 0 15px;
+}
+.product-title p {
+    padding-top: 10px;
+}
+.product-title p strike {
+    color: #ff0000;
+}
+  
+.size {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    box-sizing: border-box;
+    color: #fff
+}
+  
+.sizing {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 9px;
+}
+  
+#number-pad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ====== Contact Us Page Css ======= */
+
+.map iframe {
+    width: 100%;
+}
+
+.map {
+    position: relative;
+}
+
+.contact-heading {
+    text-align: center;
+    color: #fff;
+    margin: 60px 0 30px 0;
+}
+
+.contact-form {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    top: 80%;
+    width: 80%;
+    left: 10%;
+}
+
+.contact > h3 {
+    font-size: 24px;
+    text-align: start;
+    margin: 30px 0 20px 0;
+    font-family: 'Jost', sans-serif;
+} 
+
+.contact > p {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: start;
+    margin: 30px 0 40px 0;
+}
+
+.contact ul li > span {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contact ul li {
+
+}
+
+/* ==== Footer Css ==== */
+

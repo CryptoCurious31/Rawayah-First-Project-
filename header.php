@@ -12,7 +12,7 @@
     <?php echo wp_head();?>
 </head>
 
-<body>
+<body <?php body_class();?>>
     <main>
         <!-- ======== Header Code Start =========== -->
         <header class="header">
@@ -28,52 +28,42 @@
                     Rawayah
                 </h1>
                 <div class="icons">
-                    <a class="MenuItems" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a class="MenuItems" href="#"><svg class="t4s-obj-eff t4s-icon-box3" width="18" height="20" viewBox="0 0 18 20"><path d="M8.66023 0L17.3205 4.99997V15L8.66023 20L0 15V4.99997L8.66023 0ZM8.66023 1.35316L1.75781 5.33826L3.45123 6.31596L10.3537 2.33085L8.66023 1.35316ZM11.5255 3.00743L4.6231 6.99255L5.79498 7.66913L12.6974 3.68401L11.5255 3.00743ZM13.8693 4.36059L6.96685 8.34572L8.66023 9.3234L15.5627 5.33826L13.8693 4.36059ZM16.1486 6.35313L9.24617 10.3383V18.3085L16.1486 14.3234V6.35313ZM8.0743 18.3085V10.3383L6.3809 9.36058V14.0223L2.86527 11.9926V7.33083L1.17188 6.35314V14.3234L8.0743 18.3085ZM4.03715 8.00741V11.316L5.20902 11.9926V8.684L4.03715 8.00741Z"></path></svg></a>
                     <a class="MenuItems" href="#"><i class="fa-solid fa-user"></i></a>
                     <a class="MenuItems" href="#"><i class="fa-regular fa-heart"></i></a>
                     <a class="MenuItems" href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
                 </div>
             </div>
-            <div class="navbar">
-                <nav class="navigationBar">
-                    <ul class="list">
-                        <a class="MenuItems" href="#">
-                            <li class="listitems">Home</li>
-                        </a>
-                        <a class="MenuItems" href="#">
-                            <li class="listitems">All Products</li>
-                        </a>
-                        <div class="dropDownMenu">
-                            <button class="dropDownbtn">Category</button>
-                            <div class="dropDownContent">
-                                <a class="MenuItems" href="#">
-                                    <li class="listitems">All</li>
-                                </a>
-                                <a class="MenuItems" href="#">
-                                    <li class="listitems">Sandals</li>
-                                </a>
-                                <a class="MenuItems" href="#">
-                                    <li class="listitems">Flat</li>
-                                </a>
-                                <a class="MenuItems" href="#">
-                                    <li class="listitems">Mules</li>
-                                </a>
-                                <a class="MenuItems" href="#">
-                                    <li class="listitems">Heels</li>
-                                </a>
-                                <a class="MenuItems" href="#">
-                                    <li class="listitems">Courtshoes</li>
-                                </a>
-                            </div>
-                        </div>
-                        <a class="MenuItems" href="#">
-                            <li class="listitems">New Arrivals</li>
-                        </a>
-                        <a class="MenuItems" href="#">
-                            <li class="listitems">Contact</li>
-                        </a>
+            <div class="main-menu">
+                    
+                <!-- <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="£">All Products</a></li>
+                    <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="#">example</a></li>
+                        <li><a href="#">example</a></li>
+                        <li><a href="#">example</a></li>
+                        <li><a href="#">example</a></li>
+                        <li><a href="#">example</a></li>
                     </ul>
-                </nav>
+                </li>
+                    <li><a href="£">New Arrivals</a></li>
+                    <li><a href="£">Contact</a></li>
+                </ul>
+                </nav> -->
+                <?php
+                    // Place this code where you want to display the menu, typically in header.php or any other template file
+                    $menu_args = array(
+                        'theme_location'  => 'header_menu', // This should match the registered menu location
+                        'container'       => 'nav', // Container element for the menu
+                        'container_class' => 'header-menu', // Class for the container
+                    );
+
+                    wp_nav_menu( $menu_args );
+                    ?>
+                
             </div>
             <div class="strip">
                 <i class="fa-solid fa-person-walking-arrow-loop-left"></i>

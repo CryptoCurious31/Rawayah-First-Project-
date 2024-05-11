@@ -31,32 +31,46 @@
 
         <!-- ======== All Product Section -->
         <section class="allProduct">
-            <div class="containerTwo">
-                <div class="imagesSectionTwo">
-                    <div class="image-one">
-                        <a class="imageOne forDisplay" href="#"><img class="oneClass"
-                                src="./Props/Hocks/All products.jpg" alt="All Products" srcset=""></a>
-                        <a class="CategoryName" class="all-Product" href="#">All Products</a>
-                    </div>
-                    <div class="image-Two">
-                        <a class="imageTwo forDisplay" href="#"><img class="oneClass" src="./Props/Hocks/Sleepers.jpg"
+            <div class="container">
+                <div class="row categories">
+                    <div class="col">
+                        <div class="category">
+                            <a class="imageTwo forDisplay" href="#"><img  src="<?php echo get_template_directory_uri() . '/Props/Hocks/Sleepers.jpg'  ?> "
                                 alt="CourtShoes" srcset=""></a>
-                        <a class="CategoryName" class="Court-shoes" href="#">CourtShoes</a>
+                        <h3><a href="#">CourtShoes</a></h3>
+                        </div>
                     </div>
-                    <div class="image-Three">
-                        <a class="imageThree forDisplay" href="#"><img class="oneClass" src="./Props/Hocks/Heels.jpg"
-                                alt="Heels" srcset=""></a>
-                        <a class="CategoryName" class="heels" href="#">Heels</a>
+                    <div class="col">
+                        <div class="category">
+                            <a class="imageTwo forDisplay" href="#"><img  src="<?php echo get_template_directory_uri() . '/Props/Hocks/Sleepers.jpg'  ?> "
+                                alt="CourtShoes" srcset=""></a>
+                        <h3><a href="#">CourtShoes</a></h3>
+                        </div>
+                        
                     </div>
-                    <div class="image-Four">
-                        <a class="imageFour forDisplay" href="#"><img class="oneClass" src="./Props/Hocks/sandals.jpg"
-                                alt="Sandals" srcset=""></a>
-                        <a class="CategoryName" class="Sandals" href="#">Sandals</a>
+                    <div class="col">
+                        <div class="category">
+                            <a class="imageTwo forDisplay" href="#"><img  src="<?php echo get_template_directory_uri() . '/Props/Hocks/Sleepers.jpg'  ?> "
+                                alt="CourtShoes" srcset=""></a>
+                        <h3><a href="#">CourtShoes</a></h3>
+                        </div>
+                        
                     </div>
-                    <div class="image-Five">
-                        <a class="imageFive forDisplay" href="#"><img class="oneClass" src="./Props/Hocks/Mules.jpg"
-                                alt="Mules" srcset=""></a>
-                        <a class="CategoryName" class="Mules" href="#">Mules</a>
+                    <div class="col">
+                        <div class="category">
+                            <a class="imageTwo forDisplay" href="#"><img  src="<?php echo get_template_directory_uri() . '/Props/Hocks/Sleepers.jpg'  ?> "
+                                alt="CourtShoes" srcset=""></a>
+                        <h3><a href="#">CourtShoes</a></h3>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="category">
+                            <a class="imageTwo forDisplay" href="#"><img  src="<?php echo get_template_directory_uri() . '/Props/Hocks/Sleepers.jpg'  ?> "
+                                alt="CourtShoes" srcset=""></a>
+                        <h3><a href="#">CourtShoes</a></h3>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -68,20 +82,165 @@
             <img class="pic" src="./Props/Black Beiger/2_f34a9104-6a46-414c-a148-06bc7a21b0fd_1000x.jpg" />
         </section>
 
-        <section class='product-slider'>
+        <section class='product-slider '>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
+                <div class="row product-slider1">
+                <?php
+$args = array(
+    'post_type' => 'product', // Custom post type key
+    'posts_per_page' => -1, // -1 to retrieve all posts, you can adjust this number
+);
+
+$products_query = new WP_Query( $args );
+
+if ( $products_query->have_posts() ) :
+    while ( $products_query->have_posts() ) : $products_query->the_post();
+        // Inside the loop, you can render each product post as needed
+        $product_info = get_field('products_info');
+?>
+        <div class="product-slide">
+            <div class="product-item">
+                <div class="product-img">
+                <a href="<?php the_permalink(); ?>" class="product-link"> <!-- Add the permalink -->
+                    
+                    <img src="<?php echo $product_info['image']['url'];?>" alt="">
+                    <img src="<?php echo $product_info['hover_image']['url'];?>" alt="">
+                    </a>
+                </div>
+                <div class="product-title">
+                    <h4><?php the_title(); ?></h4>
+                    <p>$<?php echo $product_info['actual_price'];?>  <strike>$<?php echo $product_info['Price'];?></strike></p> 
+                </div>
+                <div class="sizing">
+                    <div class="size">Q</div>
+                    <div class="size">W</div>
+                    <div class="size">E</div>
+                    <div class="size">R</div>
+                    <div class="size">T</div>
+                    <div class="size">Y</div>
+                    <div class="size">U</div>
+                    <div class="size">I</div>
+                    <div class="size">T</div>
+                    <div class="size">Y</div>
+                    <div class="size">U</div>
+                    <div class="size">I</div>
+                </div>
+            </div>
+        </div>
+<?php
+    endwhile;
+    wp_reset_postdata(); // Reset post data
+else :
+    // If no products are found
+    echo 'No products found.';
+endif;
+?>
+
+                    <!-- <div class="product-slide">
+                        <div class="product-item">
+                                <div class="product-img">
+                                    <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241103_600x.jpg"?>"   alt="Image 1">
+                                    <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01262750_600x.jpg"?>"   alt="Image 2">
+                                </div>
+                                <div class="product-title">
+                                    <h4>Leather Slides Sandals</h4>
+                                    <p>$450 <strike>$500</strike></p>
+                                </div>
+                                <div class="sizing">
+                                        <div class="size">Q</div>
+                                        <div class="size">W</div>
+                                        <div class="size">E</div>
+                                        <div class="size">R</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="product-slide">
                         <div class="product-item">
                             <div class="product-img">
                                 <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241103_600x.jpg"?>"   alt="Image 1">
                                 <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241110_600x.jpg"?>"   alt="Image 2">
                             </div>
+                            <div class="product-title">
+                                <h4>Leather Slides Sandals</h4>
+                                <p>$450 <strike>$500</strike></p>
+                            </div>
+                            <div class="sizing">
+                                        <div class="size">Q</div>
+                                        <div class="size">W</div>
+                                        <div class="size">E</div>
+                                        <div class="size">R</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                    </div>
                         </div>
                     </div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
+                    <div class="product-slide">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241103_600x.jpg"?>"   alt="Image 1">
+                                <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241110_600x.jpg"?>"   alt="Image 2">
+                            </div>
+                            <div class="product-title">
+                                <h4>Leather Slides Sandals</h4>
+                                <p>$450 <strike>$500</strike></p>
+                            </div>
+                            <div class="sizing">
+                                        <div class="size">Q</div>
+                                        <div class="size">W</div>
+                                        <div class="size">E</div>
+                                        <div class="size">R</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="product-slide">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241103_600x.jpg"?>"   alt="Image 1">
+                                <img src="<?php echo get_template_directory_uri() . "/Props/Black Beiger/01241110_600x.jpg"?>"   alt="Image 2">
+                            </div>
+                            <div class="product-title">
+                                <h4>Leather Slides Sandals</h4>
+                                <p>$450 <strike>$500</strike></p>
+                            </div>
+                            <div class="sizing">
+                                        <div class="size">Q</div>
+                                        <div class="size">W</div>
+                                        <div class="size">E</div>
+                                        <div class="size">R</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                        <div class="size">T</div>
+                                        <div class="size">Y</div>
+                                        <div class="size">U</div>
+                                        <div class="size">I</div>
+                                    </div>
+                        </div>
+                    </div> -->
+                    
                 </div>
             </div>
         </section>
@@ -107,11 +266,4 @@
     
     </main>
 
-    <!-- =============== Icons Script ============== -->
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
-
-    <!-- ============= Card Slider JS Script ================ -->
-    <script src="./js/Card-slider.js"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>
