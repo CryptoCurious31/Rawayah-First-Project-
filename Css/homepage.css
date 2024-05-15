@@ -48,8 +48,9 @@ p{
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    background-color: #000 !important;
+    font-family: 'Jost', sans-serif;
+    background-color: #fff !important;
+    overflow-x: hidden;
 }
 
 /*  ========= Header Css ========== */
@@ -72,11 +73,11 @@ body {
     padding-right: 10px;
     padding-bottom: 0px;
     text-decoration: none;
-    color: var(--primary-font-color);
+    color: #000;
 }
 
 .header .logoWithIcons .logo {
-    color: var(--primary-font-color);
+    color: #000;
     font-size: 30px;
     font-weight: 600;
     font-style: normal;
@@ -90,39 +91,9 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 0px;
-    color: var(--primary-font-color);
-}
-.slick-arrow{
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    transform: translate(0, -78%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-ul.slick-dots{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-ul.slick-dots li button{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    color: transparent;
+    color: #000;
 }
 
-.slick-prev{
-    left: -35px;
-}
-.slick-next{
-    right: -35px;
-}
 /* ========== Navigation Bar ============= */
 .main-menu{
     margin: 20px 0 16px 0;
@@ -140,7 +111,7 @@ ul.slick-dots li button{
     font-size: 18px;
     font-weight: 400;
     font-family: 'Jost', sans-serif;
-    color: #fff;
+    color: #000;
 
 }
 .main-menu nav > ul li:hover ul{
@@ -171,65 +142,32 @@ ul.slick-dots li button{
 
 /* ======== Strip ======== */
 
-.header .strip {
-    background-color: #fff;
-    height: 90px;
-    width: 100%;
+.strip{
+        background-color: #F3F3F3;
+        padding: 20px 0;
+}
+
+.items{
     display: flex;
-    justify-content: space-around;
-    align-content: center;
     align-items: center;
+    gap: 15px;
 }
-
-.header .strip i {
-    align-content: center;
-    position: relative;
-    right: 10px;
-    display: block;
-    margin-left: 30px;
+.description h4 {
+    font-size: 18px;
+    padding-bottom: 6px;
 }
-
-.header .strip .heading {
-    font-size: 16px;
-    font-weight: 500;
+.items .icon svg{
+    width: 20px;
 }
-
-.header .strip .subText {
-    font-size: 9px;
-    font-weight: 400;
-}
-
-.strip .return {
-    align-content: center;
-    display: inline-block;
-    position: relative;
-    left: -40px;
-}
-
-.strip .freeExchange {
-    align-content: center;
-    position: relative;
-    left: -40px;
-}
-
-.strip .freeDelivery {
-    align-content: center;
-    position: relative;
-    left: -40px;
-}
-
-.strip .warranty {
-    align-content: center;
-    position: relative;
-    left: -40px;
-}
-
 /* =========== Carousel section Css Start ============ */
 
 .carousel {
-    height: 500px;
     width: 100%;
-    margin-top: 81px;
+}
+.image img{
+    height: 510px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .carousel .container {
@@ -252,9 +190,8 @@ ul.slick-dots li button{
     height: 542px;
 }
 
-.container .text {
-    text-align: center;
-    align-content: center;
+.carousel .text {
+    text-align: center;     
 }
 
 .text .textAndHeadings {
@@ -276,36 +213,44 @@ ul.slick-dots li button{
 }
 
 .text .button .btn {
-    padding: 14px;
+    padding: 10px 34px;
     background-color: var(--dropDown-content-Background-color);
     text-decoration: none;
     color: var(--text-primary);
+    font-size: 17px;
+    transition: all 0.5s;
 }
-
-.text .button .btn:hover {
-    color: var(--text-primary-color-hover);
-    background-color: var(--background-color-btn-afterHover);
+.text .button .btn:hover{
+    background-color: #00ffff;
+    color: #fff;
 }
 
 /* ============= Carousel section Css Ends ============== */
 
 /* ============ All Product Section Css ============== */
 
+.allProduct {
+    padding: 30px 0;
+}
 
 .category img{
     width: 100%;
     border-radius: 50%;
 }
 .category h3 a{
-    color: #fff;
+    color: #000;
     text-align: center;
     font-style: normal;
     font-size: 16px;
     font-weight: 500;
     display: block;
     padding-top: 10px;
+    transition: all 0.5s;
 }
 
+.category h3 a:hover {
+    color: #00ffff;
+}
 .category h3:hover {
     color: rgb(14, 193, 174);
 }
@@ -339,47 +284,20 @@ ul.slick-dots li button{
 
 .staticPicture {
     width: 100%;
-    margin: 100px auto;
+    padding: 30px 0;
 }
 
 .premium {
     text-align: center;
-    font-size: 2.5rem;
     font-weight: 700;
-    position: relative;
-    margin-top: 30px;
-}
-
-.premium::before {
-    content: '';
-    height: 2px;
-    position: absolute;
-    background-color: #fff;
-    width: 30%;
-    top: 50%;
-}
-
-.premium::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30%;
-    background-color: #fff;
-    height: 2px;
-}
-
-.premium::before {
-    left: 0;
-}
-
-.premium::after {
-    right: 0;
+    font-size: 30px;
+    margin: 60px 0;
 }
 
 .staticPicture>img {
     display: block;
     width: 100%;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 /* ============ Featured Collection Section ============== */
@@ -406,8 +324,8 @@ ul.slick-dots li button{
   }
   
   .discount-tag {
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #000;
+    color: #ff0000;
     padding: 5px 10px;
     position: absolute;
     top: 10px;
@@ -437,14 +355,14 @@ ul.slick-dots li button{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%); 
-    transition: all .5s;   
+    transition: all .5s ease-in-out;   
 }
 
 .product-img:hover img:nth-child(2){
     opacity: 0 !important;
 }
 .product-title{
-    color: #fff;
+    color: #000;
     padding-top: 15px;
     text-align: center;
 }
@@ -468,13 +386,13 @@ ul.slick-dots li button{
 .size {
     width: 25px;
     height: 25px;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 2px;
     box-sizing: border-box;
-    color: #fff
+    color: #000;
 }
   
 .sizing {
@@ -491,6 +409,38 @@ ul.slick-dots li button{
     flex-direction: row;
     justify-content: center;
     width: 100%;
+}
+
+.slick-arrow{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transform: translate(0, -78%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul.slick-dots{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+ul.slick-dots li button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.slick-prev{
+    left: -35px;
+}
+.slick-next{
+    right: -35px;
 }
 
 /* ====== Contact Us Page Css ======= */
@@ -545,129 +495,217 @@ ul.slick-dots li button{
 
 /* ==== Footer Css ==== */
 
-.footer {
-    margin-top: 150px;
-}
 
-.footer-container {
-    width: 100%;
-}
-
-.parent-element {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+footer {
     background-color: #fff;
     color: #000;
-    padding: 40px;
-    gap: 60px;
+    padding: 50px 0;
 }
 
-.parent-element > ul > li:nth-child(1) {
-    font-family: 'Jost', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: start;
-}
-
-.parent-element .description {
-    /* This is for the first paragraph element in Html file */
-    font-family: 'Jost', sans-serif;
+.footer-content ul li a{
     font-size: 14px;
-    font-weight: 400;
-    margin: 30px 0;
-    color: #878787;
+    color: #000;
+    font-family: 'Jost',sans-serif;
+    transition: all .5s;
 }
-
-.contact-items {
-    line-height: 2;
+.footer-content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
-.customer-service {
-    line-height: 3;
+.footer-content h3{
+    margin-bottom: 10px;
 }
-
-.customer-service li:nth-child(2) {
+.footer-content p{
     font-size: 14px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    /* color: #878787; */
-    margin-top: 10px;
-    text-decoration: none;
+    font-family: 'Jost',sans-serif; 
 }
-
-.customer-service li:nth-child(3) {
-    font-size: 14px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    /* color: #878787; */
-    text-decoration: none;
-    /* margin-top: 10px; */
+.footer-content form input{
+    width: 85%;
+    padding: 8px 15px;
+    margin-top: 13px;
 }
-
-.customer-service li:nth-child(4) {
-    font-size: 14px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    /* color: #878787; */
-    text-decoration: none;
-    /* margin-top: 10px; */
+.footer-content form button{
+    background: #000;
+    color: #fff;
+    padding: 8px 25px;
+    margin-top: 15px;
 }
-
-.customer-service li:nth-child(5) {
-    font-size: 14px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    /* color: #878787; */
-    text-decoration: none;
-    /* margin-top: 10px; */
-}
-
-.customer-service li:nth-child(6) {
-    font-size: 14px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    /* margin-top: 10px; */
-}
-
-.customer-service li a {
-    color: #878787;
-    transition: all 0.2s ease-in;
-}
-
-.customer-service li a:hover {
+.footer-content ul li:hover a{
     color: #00ffff;
 }
+.social-icons{
+    padding-top: 15px;
+}
+/* Testimonial Section CSS */
 
-.newsletter li:nth-child(2) p {
-    font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #878787;
-    margin-bottom: 15px;
+.testimonial{
+    text-align: center;
+    padding: 10px 0;
+    transition: all .5s;
+    margin: 10px 0;
+}
+.testimonial .body{
+    font-size: 36px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+}
+.testimonial .rating ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+.testimonial .rating ul li i{
+    color: #EBBF20;
+}
+.review-item__avatar-initial{
+    display: block;
+    background-color: #E6E6E6;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: 'Jost', Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.author{
+    /* text-align: center; */
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.newsletter input {
-    padding: 5px 25px;
-    font-family: 'Jost', sans-serif;
-    color: #878787;
+.author p {
     font-size: 14px;
     font-weight: 400;
 }
 
-.newsletter button {
-    margin-top: 8px;
+.testimonial:hover{ 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= All Product Css ======= */
+
+.allproduct-page {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-container {
+    width: 300px;
+}
+
+.image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 2s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+.rating ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating ul li i {
+    color: #EBBF20;
+}
+
+.button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 50px;
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.image-container:hover .button {
+    opacity: 1;
+}
+
+.image-container:hover .left-button {
+    transform: translate(-100%, -50%);
+}
+
+.image-container .left-button:hover {
     background-color: #000;
     color: #fff;
-    padding: 7px 20px;
-    border: none;
-    font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
+
 }
 
-.newsletter button:hover {
-    color: #00ffff;
+.image-container .right-button:hover {
+    background-color: #000;
+    color: #fff;
+
 }
+
+.image-container:hover .right-button {
+    transform: translate(20%, -50%);
+}
+
+.image-container .icon {
+    position: absolute;
+    top: 10px; /* Adjust the position as needed */
+    right: 10px; /* Adjust the position as needed */
+    font-size: 15px; /* Adjust the size of the icon */
+    background: rgba(11, 10, 10, 0.8); /* Optional: add a semi-transparent background */
+    color: #fff;
+    padding: 5px; /* Optional: add some padding */
+    border-radius: 50%; /* Optional: make the background circle */
+    transition: color transform 0.3s ease, all 0.2s ease;
+}
+
+.image-container .icon:hover {
+    color: #ff0000; /* Red color for the heart icon */ 
+    transform: scale(1.2) 
+}
+
+/* ======= Single Product Page ======== */
+
+.single-product-image {
+    width: 90%;
+}
+
+.single-product-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-images {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.container-images img {
+    width: 100%;   
+}
+
+
+
+
+

@@ -17,6 +17,7 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function theme_register_menus() {
     register_nav_menus( array(
         'header_menu' => esc_html__( 'Header Menu', 'header_menu' ),
+        'footer_menu' => esc_html__( 'Footer Menu', 'footer_menu' ),
     ) );
 }
 add_action( 'after_setup_theme', 'theme_register_menus' );
